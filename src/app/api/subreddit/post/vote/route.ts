@@ -26,7 +26,7 @@ export async function PATCH(req: Request) {
       }
     })
 
-    const post = await db.post.findFirst({
+    const post = await db.post.findUnique({
       where: {
         id: postId
       },
