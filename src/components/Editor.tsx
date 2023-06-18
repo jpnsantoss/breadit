@@ -6,7 +6,6 @@ import type EditorJS from "@editorjs/editorjs";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
-import { Link } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import { FC, useCallback, useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";

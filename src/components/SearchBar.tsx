@@ -26,7 +26,6 @@ const SearchBar: FC<SearchBarProps> = ({}) => {
     data: queryResults,
     refetch,
     isFetched,
-    isFetching,
   } = useQuery({
     queryFn: async () => {
       if (!input) return [];
@@ -43,9 +42,9 @@ const SearchBar: FC<SearchBarProps> = ({}) => {
     refetch();
   }, 300);
 
-  const debouceRequest = useCallback(() => {
+  const debounceRequest = useCallback(() => {
     request();
-  }, []);
+  }, [request]);
 
   const commandRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
@@ -63,11 +62,11 @@ const SearchBar: FC<SearchBarProps> = ({}) => {
       className="relative rounded-lg border max-w-lg z-50 overflow-visible"
     >
       <CommandInput
-        value={input}
         onValueChange={(text) => {
           setInput(text);
-          debouceRequest();
+          debounceRequest();
         }}
+        value={input}
         className="outline-none border-none focus:border-none focus:outline-none ring-0"
         placeholder="Search communities..."
       />

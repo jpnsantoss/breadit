@@ -1,5 +1,4 @@
 "use client";
-import { useCustomToast } from "@/hooks/use-custom-toast";
 import { toast } from "@/hooks/use-toast";
 import { UsernameRequest, UsernameValidator } from "@/lib/validators/username";
 import { zodResolver } from "@hookform/resolvers/zod";
