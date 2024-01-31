@@ -2,7 +2,7 @@
 
 ## Project Description
 
-Just a project I made in my spare time to learn NextJS. Contains all CRUD Operations, cache, a text-block editor, etc..  
+Just a project I made in my spare time to learn NextJS. Contains authentication, all CRUD Operations, cache, a text-block editor, etc..  
 
 ### Tecnologies Used
 
